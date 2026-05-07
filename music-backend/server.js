@@ -17,9 +17,9 @@ app.get("/search", async (req, res) => {
     res.json(data);
 
   } catch (err) {
-    res.status(500).json({ error: "Failed to fetch music" });
+    res.status(500).json({ error: "API failed" });
   }
 });
 
 const PORT = process.env.PORT || 3000;
-app.listen(PORT, () => console.log("Backend running on port " + PORT));
+app.listen(PORT, () => console.log("Server running on " + PORT));
